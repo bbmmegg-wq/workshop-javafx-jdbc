@@ -15,10 +15,12 @@ public class SellerService {
 	}
 	
 	public void saveOrUpdate(Seller obj) {
-		if(obj.getName()== null) {
+		if(obj.getId()== null) {
 			dao.insert(obj);
 		}
+		else {
 		dao.update(obj);
+		}
 	}
 	
 	public void remove(Seller obj) {
